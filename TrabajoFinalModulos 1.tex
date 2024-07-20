@@ -1,0 +1,231 @@
+\documentclass[notes=show]{beamer}%
+\usepackage{mathpazo}
+\usepackage{hyperref}
+\usepackage{multimedia}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=beamer.cst}
+%TCIDATA{Created=Thursday, July 01, 2021 12:41:31}
+%TCIDATA{LastRevised=Sunday, July 31, 2022 20:20:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Other Documents\SW\Slides - Beamer">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newenvironment{Defi}{\begin{block}{Definición}}{\end{block}}
+\newenvironment{Lema}{\begin{block}{Lema}}{\end{block}}
+\newenvironment{Corol}{\begin{block}{Corolario}}{\end{block}}
+\newenvironment{Propo}{\begin{block}{Proposición}}{\end{block}}
+\newenvironment{Teo}{\begin{block}{Teorema}}{\end{block}}
+\newenvironment{Ej}{\begin{block}{Ejemplo}}{\end{block}}
+\newenvironment{Ob}{\begin{block}{Observación}}{\end{block}}
+\newenvironment{stepenumerate}{\begin{enumerate}[<+->]}{\end{enumerate}}
+\newenvironment{stepitemize}{\begin{itemize}[<+->]}{\end{itemize} }
+\newenvironment{stepenumeratewithalert}{\begin{enumerate}[<+-| alert@+>]}{\end{enumerate}}
+\newenvironment{stepitemizewithalert}{\begin{itemize}[<+-| alert@+>]}{\end{itemize} }
+\newenvironment{ObV}{\begin{exampleblock}{Observación}}{\end{exampleblock}}
+\newenvironment{PropoR}{\begin{alertblock}{Proposición}}{\end{alertblock}}
+\newenvironment{EjV}{\begin{exampleblock}{Ejemplo}}{\end{exampleblock}}
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+\begin{document}
+
+\title{Trabajo Final: Módulos}
+\subtitle{Estructuras Algebraicas}
+\author{Nicolas Silva Nash}
+\institute{UNCO}
+\date{}
+\maketitle
+
+\bigskip%
+\begin{frame}
+    \frametitle{Definición de Módulo}
+    Sea \( R \) un anillo. Un \( R \)-módulo por derecha \( M \) es
+    \begin{enumerate}
+        \item[(I)] un grupo abeliano aditivo $(M, +)$ junto con
+        \item[(II)] una aplicación
+        \[
+        M \times R \;\rightarrow\; M \quad \text{con} \quad (m, r) \mapsto mr,
+        \]
+        llamada \textit{multiplicación de módulo}, para la cual tenemos
+        \begin{enumerate}
+            \item Ley asociativa: \((mr_1)r_2 = m(r_1r_2)\).
+            \item Leyes distributivas: 
+            \[
+            (m_1 + m_2)r = m_1r + m_2r, \quad m(r_1 + r_2) = mr_1 + mr_2.
+            \]
+            \item Ley unitaria: \( m \cdot 1 = m \).
+        \end{enumerate}
+    \end{enumerate}
+    Con \( m, m_1, m_2 \) elementos arbitrarios de $M$ y \( r, r_1, r_2 \) elementos arbitrarios de $R$.
+\end{frame}
+
+% FRAME 2
+\begin{frame}
+    \frametitle{Módulos}
+    Algunas observaciones:
+    \begin{enumerate}
+        \item Podemos definir de manera análoga un \( R \)-módulo por izquierda.
+        \item Notamos \( M_R \) al \( R \)-módulo por derecha y \( _{R}M \) al \( R \)-módulo por izquierda.
+        \item Si un módulo verifica ambas condiciones para anillos \( R \) (por derecha) y \( S \) (por izquierda), 
+        y además verifica: 
+        \[ s(mr) = (sm)r, \qquad \forall s \in S, r \in R \] 
+        decimos que es un \( S-R \)-bimódulo al que notamos \( _{S}M_R \).
+        \item Si \( 0_M \) es el cero de \( M \), \( 0_R \) es el cero de \( R \), entonces:
+        \begin{itemize}
+            \item \( 0_M \cdot r = 0_M \)
+            \item \( m \cdot 0_R = 0_M \), \(\forall m \in M, r \in R \)
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+% FRAME 3
+\begin{frame}
+    \frametitle{Submódulos}
+    \textbf{Definición}: 
+    Sea \( M \) un \( R \)-módulo por derecha. Un subconjunto \( A \) de \( M \) se llama un submódulo de \( M \), 
+    notacionalmente \( A \hookrightarrow M \) (o también \( A_R \hookrightarrow M_R \)) si \( A \) es un \( R \)-módulo 
+    por derecha con respecto a la restricción de la suma y la multiplicación de módulo de \( M \) a \( A \).\\
+    \bigskip
+    Usamos la notación \( A \hookrightarrow M \) para la relación de submódulo, para tener disponible \( A \subseteq M \) 
+    para la inclusión en teoría de conjuntos. Además, denotamos \( A \hookrightarrow_{\neq} M \) si y sólo si \( A \) 
+    es un submódulo propio de \( M \).\\
+    \bigskip
+    Notamos \( A \not\hookrightarrow M \) si \( A \) no es un submódulo de \( M \). Observamos que de \( A \not\hookrightarrow M \) 
+    no necesariamente se sigue que \( A \nsubseteq M \).
+\end{frame}
+
+\begin{frame}
+    \frametitle{Submódulos}
+    \textbf{Lema}:\\ 
+    Sea \( M \) un \( R \)-módulo por derecha. Si \( A \) es un subconjunto de \( M \) y \( A \neq \emptyset \), entonces las 
+    siguientes afirmaciones son equivalentes:
+    \begin{enumerate}
+        \item \( A \hookrightarrow M \).
+        \item \( A \) es un subgrupo del grupo aditivo de \( M \) y para todo \( a \in A \) y todo \( r \in R \), tenemos 
+        \( ar \in A \) (donde \( ar \) es la multiplicación de módulo en \( M \)).
+        \item Para todos \( a_1, a_2 \in A \), \( a_1 + a_2 \in A \) (con respecto a la suma en \( M \)) y para todo 
+        \( a \in A \) y todo \( r \in R \), tenemos \( ar \in A \).
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Submódulos: Ejemplos y observaciones}
+    \begin{enumerate}
+        \item Todo módulo \( M \) posee los submódulos triviales \( 0 \) y \( M \), donde \( 0 \) es el submódulo 
+        que contiene solo el elemento cero de \( M \).
+        \item Sea \( M \) arbitrario y sea \( m_0 \in M \).
+        \[
+        m_0R = \{m_0r \mid r \in R\}
+        \]
+        es un submódulo de \( M \) que se llama el submódulo cíclico de \( M \) generado por \( m_0 \).
+        \item Si \( M_K \) es un espacio vectorial sobre el campo \( K \), entonces los submódulos se 
+        laman subespacios (lineales).
+        \item En el anillo \( \mathbb{Z} \) de los números naturales, cada ideal es cíclico.
+        \item Los ideales cíclicos de un anillo se llaman ideales principales y un anillo conmutativo se 
+        llama anillo de ideales principales si cada ideal es un ideal principal.
+        \item Un campo \( K \) tiene solo los ideales triviales \( 0 \) y \( K \).
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Submódulos: Definiciones}
+    \begin{enumerate}
+        \item[(1)] Un módulo \( M = M_R \) se llama \textit{cíclico} si y solo si
+        \[ \exists m_0 \in M : \; M = m_0R \]
+        \item[(2)] Un anillo \( R \) se llama \textit{simple} si y solo si
+        \[
+        \forall A \hookrightarrow R: \; A = 0 \text{ or} A = R,
+        \]
+        es decir, \( 0 \) y \( R \) son los únicos ideales bilaterales de \( R \).
+        \item[(3)] Un submódulo \( A \hookrightarrow M \) se dice un \textit{submódulo minimal} de \( M \) si y solo si
+        \[
+        0 \hookrightarrow B \hookrightarrow A \;\Rightarrow\; B = 0 \text{ o } B = A,
+        \]
+        \item[(4)] Un submódulo \( A \hookrightarrow M \) se dice un \textit{submódulo maximal} sí y solo si
+     \[
+            A \hookrightarrow B \hookrightarrow M \;\Rightarrow\; B = A \text{ o } B = M.
+            \]
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Submódulos}
+    \textbf{Lema.} \( M \) es simple si y solo si
+    \begin{enumerate}
+        \item \( M \neq 0\)
+        \item \( \forall m \in M: \; m \neq 0 \Rightarrow mR = M \)
+    \end{enumerate}
+    \textbf{Prueba.}
+    \begin{itemize}
+        \item \textbf{(\( \Rightarrow \))}: 
+        Supongamos que \( M \) es simple. Sea \( m \in M, m\neq 0 \). Entonces \( m = m \cdot 1 \in mR \), luego \(mR \neq 0\). 
+        Como \(mR\subset M\) y \(M\) es simple, tenemos que necesariamente \( mR = M\). 
+        \item \textbf{(\( \Leftarrow \))}: Sea \(A\) tal que \( 0 \hookrightarrow_{\neq} A \hookrightarrow_{\neq} M \) y sea \(a\in A, a\neq 0\).
+        Luego \(aR\in A \). Además, por la hipótesis, \(a \in M\) implica \(aR = M\). Sigue que \(aR = M \subset A\), luego \(A = M\).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Ejemplos}
+    \begin{enumerate}
+        \item \( \mathbb{Z} \) no contiene ideales minimales (simples), ya que si \( n\mathbb{Z} \neq 0 \), 
+        entonces \( 2n\mathbb{Z} \) es un ideal no nulo contenido dentro de \( n\mathbb{Z} \). 
+        \item Los ideales maximales de \( \mathbb{Z} \) son exactamente los ideales primos \( p\mathbb{Z} \), donde \( p \) 
+        es un número primo. La prueba de esto sigue del hecho de que
+        \[
+        m\mathbb{Z} \hookrightarrow n\mathbb{Z} \iff n \mid m.
+        \]
+        \item \( \mathbb{Q}_{\mathbb{Z}} \) no tiene submódulos minimales ni maximales.\\
+        Supongamos que \( A \) es un submódulo no trivial de \( \mathbb{Q}_{\mathbb{Z}} \). \\
+        Sea \(A\) tal que \( 0 \hookrightarrow_{\neq} A \hookrightarrow \mathbb{Q}_{\mathbb{Z}} \). 
+        Sea \( a \in A\) tal que \(a\neq 0\).
+        Entonces
+        \[
+        0 \hookrightarrow_{\neq} 2a\mathbb{Z} \hookrightarrow_{\neq} a\mathbb{Z} \hookrightarrow A \hookrightarrow \mathbb{Q}.
+        \]
+        Por lo tanto, \( A \) no puede ser minimal. 
+        Más adelante veremos que no existen submódulos maximales.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Definición de Álgebra}
+    Aprovechamos esta oportunidad para recordar la definición de un álgebra.\\
+    
+    \textbf{Definición.} Un álgebra es un par \( (R, K) \), donde
+    \begin{enumerate}
+        \item[(I)] \( R \) es un anillo.
+        \item[(II)] \( K \) es un anillo conmutativo.
+        \item[(III)] \( R \) es un módulo derecho sobre \( K \) para el cual se cumple
+        \[
+        \forall r_1, r_2 \in R, \, k \in K: \quad (r_1 r_2) k = r_1 (r_2 k) = (r_1 k) r_2.
+        \]
+    \end{enumerate}
+
+
+    Hemos definido a \( R \) con un elemento unitario y a \( K \) actuando unitariamente sobre \( R \). 
+    El par \( (R, K) \) también se denomina \( K \)-álgebra o álgebra sobre \( K \).\\
+    No tiene sentid definir a \( R \) como una "álgebra derecha sobre \( K \)". Dado que \( K \) es conmutativo, podemos, a partir de la definición
+    \[
+    kr := rk, \quad \forall r \in R, k \in K,
+    \]
+    pasar inmediatamente a una "álgebra izquierda sobre \( K \)".
+    
+\end{frame}
+
+
+
+
+
+
+
+\end{document}

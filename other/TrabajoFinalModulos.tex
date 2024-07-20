@@ -1,0 +1,1278 @@
+\documentclass[notes=show]{beamer}%
+\usepackage{mathpazo}
+\usepackage{hyperref}
+\usepackage{multimedia}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{CSTFile=beamer.cst}
+%TCIDATA{Created=Thursday, July 01, 2021 12:41:31}
+%TCIDATA{LastRevised=Sunday, July 31, 2022 20:20:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Other Documents\SW\Slides - Beamer">}
+%TCIDATA{Language=American English}
+%BeginMSIPreambleData
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+%EndMSIPreambleData
+\newenvironment{Defi}{\begin{block}{Definición}}{\end{block}}
+\newenvironment{Lema}{\begin{block}{Lema}}{\end{block}}
+\newenvironment{Corol}{\begin{block}{Corolario}}{\end{block}}
+\newenvironment{Propo}{\begin{block}{Proposición}}{\end{block}}
+\newenvironment{Teo}{\begin{block}{Teorema}}{\end{block}}
+\newenvironment{Ej}{\begin{block}{Ejemplo}}{\end{block}}
+\newenvironment{Ob}{\begin{block}{Observación}}{\end{block}}
+\newenvironment{stepenumerate}{\begin{enumerate}[<+->]}{\end{enumerate}}
+\newenvironment{stepitemize}{\begin{itemize}[<+->]}{\end{itemize} }
+\newenvironment{stepenumeratewithalert}{\begin{enumerate}[<+-| alert@+>]}{\end{enumerate}}
+\newenvironment{stepitemizewithalert}{\begin{itemize}[<+-| alert@+>]}{\end{itemize} }
+\newenvironment{ObV}{\begin{exampleblock}{Observación}}{\end{exampleblock}}
+\newenvironment{PropoR}{\begin{alertblock}{Proposición}}{\end{alertblock}}
+\newenvironment{EjV}{\begin{exampleblock}{Ejemplo}}{\end{exampleblock}}
+\usetheme{CambridgeUS}
+\usecolortheme{beaver}
+\begin{document}
+
+\title{Módulos}
+\subtitle{Estructuras Algebraicas}
+\author{Nicolas Silva Nash}
+\institute{Universidad Nacional del Comahue}
+\date{}
+\maketitle
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Módulo generado}}%
+%BeginExpansion
+\frametitle{Módulo generado}%
+%EndExpansion
+
+
+
+
+\begin{Lema}
+Sea $\Gamma$ una familia de submódulos del módulo $M$, entonces,%
+
+\[%
+%TCIMACRO{\dbigcap \limits_{A\in\Gamma}}%
+%BeginExpansion
+{\displaystyle\bigcap\limits_{A\in\Gamma}}
+%EndExpansion
+A=\{m\in M\,\ /\text{ }\forall A\in\Gamma\text{ }:\text{ }m\in A\},
+\]
+
+
+es un submódulo de $M$.
+\end{Lema}
+
+\begin{Corol}
+$%
+%TCIMACRO{\dbigcap \limits_{A\in\Gamma}}%
+%BeginExpansion
+{\displaystyle\bigcap\limits_{A\in\Gamma}}
+%EndExpansion
+A$ es el mayor submódulo que contiene a todos los elementos de la familia
+$\Gamma$.
+\end{Corol}
+
+%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Módulo generado}}%
+%BeginExpansion
+\frametitle{Módulo generado}%
+%EndExpansion
+
+
+\begin{Lema}
+Sea $X$ un subconjunto del módulo$\ M_{R}$, luego
+
+$A=\left\{
+\begin{array}
+[c]{l}%
+\{%
+%TCIMACRO{\dsum \limits_{j=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{j=1}^{n}}
+%EndExpansion
+x_{j}r_{j}\text{ }/\text{ }x_{j}\in X,\text{ }r_{j}\in R\text{, }n\in%
+%TCIMACRO{\U{2115} }%
+%BeginExpansion
+\mathbb{N}
+%EndExpansion
+\},\text{ si }X\neq\varnothing\\
+\{0\},\text{ si }X=\varnothing
+\end{array}
+\right.  ,$
+
+es un submódulo de $M$.
+\end{Lema}
+
+\textbf{Demostración:}
+
+Si $X=\varnothing,$ es trivial.
+
+Si $X\neq\varnothing,$ sean $a_{1},a_{2}\in A,$ así $a_{1}=%
+%TCIMACRO{\dsum \limits_{i=1}^{m}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{m}}
+%EndExpansion
+x_{i}r_{i}$, $a_{1}=%
+%TCIMACRO{\dsum \limits_{j=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{j=1}^{n}}
+%EndExpansion
+x_{j}r_{j}$, luego $a_{1}+a_{2}\in A.$ Además, sea $r\in R$
+
+$a_{1}r=(%
+%TCIMACRO{\dsum \limits_{i=1}^{m}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{m}}
+%EndExpansion
+x_{i}r_{i})r=%
+%TCIMACRO{\dsum \limits_{i=1}^{m}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{m}}
+%EndExpansion
+(x_{i}r_{i})r=%
+%TCIMACRO{\dsum \limits_{i=1}^{m}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{m}}
+%EndExpansion
+x_{i}r^{\prime}$
+
+\bigskip
+
+por lo tanto $a_{1}r\in A$. Así $A$ es un submódulo de $M$.\bigskip
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Módulo generado}}%
+%BeginExpansion
+\frametitle{Módulo generado}%
+%EndExpansion
+
+
+\begin{Defi}
+\bigskip El conjunto $A$ definido en el lema anterior es llamado
+\textbf{submódulo a derecha generado }por $X$. Notamos $|X)$.
+\end{Defi}
+
+Este submódulo generado contiene a todas las combinaciones lineales
+finitas $\sum x_{i}r_{i}$ y lo podemos caracterizar con el siguente lema.
+
+\begin{Lema}
+$|X)$ es el menor submódulo de $M$ que contiene a $X$, es decir,%
+
+\[
+|X)=%
+%TCIMACRO{\dbigcap \limits_{\substack{C\hookrightarrow M\\X\subseteq C}}}%
+%BeginExpansion
+{\displaystyle\bigcap\limits_{\substack{C\hookrightarrow M\\X\subseteq C}}}
+%EndExpansion
+C\text{.}%
+\]
+
+\end{Lema}
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip
+
+\bigskip%
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Módulo generado}}%
+%BeginExpansion
+\frametitle{Módulo generado}%
+%EndExpansion
+
+
+\bigskip\textbf{Dem. }Si $X=\varnothing,$ es trivial, pues $|X)=\{0\}$ y $X$
+contiene al submódulo trivial $\{0\}$.
+
+Supongamos que $X\neq\varnothing$ y sea $C$ un submódulo de $M$ que
+contiene a $X$, luego $x_{i},$ $x_{i}r_{i}$ y todas las sumas finitas de estos
+elementos estan en $C,$ sigue que $|X)\hookrightarrow C$.
+
+Como $X\subseteq|X)$, ya que $x=x1,$ $\forall x\in X,$ tenemos que $|X)$ es
+uno de los submódulos de $M$ que contienen a $X$, entonces $%
+%TCIMACRO{\dbigcap \limits_{\substack{C\hookrightarrow M\\X\subseteq C}}}%
+%BeginExpansion
+{\displaystyle\bigcap\limits_{\substack{C\hookrightarrow M\\X\subseteq C}}}
+%EndExpansion
+C\subseteq|X)$.
+
+\bigskip
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip
+
+%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Módulo generado}}%
+%BeginExpansion
+\frametitle{Módulo generado}%
+%EndExpansion
+
+
+\begin{Ob}
+\bigskip\ 
+
+\begin{itemize}
+\item Sean $M$ un $R$-módulo a izquierda, $X\subseteq M$ y $X\neq
+\varnothing$ entonces%
+
+\[
+(X|=\{%
+%TCIMACRO{\dsum \limits_{j=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{j=1}^{n}}
+%EndExpansion
+r_{j}x_{j}\text{ }/\text{ }x_{j}\in X,\text{ }r_{j}\in R\text{, }n\in%
+%TCIMACRO{\U{2115} }%
+%BeginExpansion
+\mathbb{N}
+%EndExpansion
+\}
+\]
+
+
+\item Sean $M$ un S$R$-módulo, $X\subseteq M$ y $X\neq\varnothing$ entonces%
+
+\[
+(X)=\{%
+%TCIMACRO{\dsum \limits_{j=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{j=1}^{n}}
+%EndExpansion
+s_{j}x_{j}r_{j}\text{ }/\text{ }x_{j}\in X,\text{ }r_{j}\in R\text{, }s_{j}\in
+S\text{, }n\in%
+%TCIMACRO{\U{2115} }%
+%BeginExpansion
+\mathbb{N}
+%EndExpansion
+\}
+\]
+
+\end{itemize}
+\end{Ob}
+
+%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Base}}%
+%BeginExpansion
+\frametitle{Base}%
+%EndExpansion
+
+
+\begin{Defi}
+\bigskip Sean $M~$un $R$-módulo a derecha y $X\subseteq M$.
+
+\begin{itemize}
+\item $X$ es un \textbf{conjunto de generadores }de $M$ si y solo si $|X)=M$.
+
+\item Un módulo está \textbf{finitamente generado} si y solo si existe
+un conjunto finito de generadores.
+
+\item Un módulo se denomina \textbf{cíclico} si y solo si es generado
+por un conjunto con un único elemento.
+
+\item $X$ se dice \textbf{libre }si y solo si para todo subconjunto finito de
+$X$, $\{x_{1},\ldots,x_{m}\}\subset X$, con $x_{i}\neq x_{j}$ para $i\neq j,$
+$i,j=1,\ldots,m$, se cumple que%
+
+\[%
+%TCIMACRO{\dsum \limits_{i=1}^{m}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{m}}
+%EndExpansion
+x_{i}r_{i}=0\text{, }r_{i}\in R\Rightarrow r_{i}=0,\text{ }\forall
+i=1,\ldots,m\text{.}%
+\]
+
+\end{itemize}
+\end{Defi}
+
+\bigskip
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Base}}%
+%BeginExpansion
+\frametitle{Base}%
+%EndExpansion
+
+
+\begin{Defi}
+\bigskip\ $X$ es una \textbf{base }de $M$ si y solo si $X$ es un conjunto
+libre de generadores de $M$.
+\end{Defi}
+
+Si $X$ es un conjunto de generdaores de $M$, entonces podemos escribir a cada
+elemento de $X$ como una combinacion lineal finita de elementos de $X$, pero
+esto no significa que la combinación lineal sea única. Veamos que la
+combinación es única si tenemos una base.
+
+\begin{Lema}
+Sea $X\neq\varnothing$ un conjunto generador de $M=M_{R}$. Luego $X$ es una
+base si y solo para todo $m\in M$ la representación%
+
+\[
+m=%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}\text{, con }x_{i}\in X\text{, }r_{i}\in R\text{ es única.}%
+\]
+
+\end{Lema}
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip\qquad%
+%TCIMACRO{\QTR{frametitle}{Base}}%
+%BeginExpansion
+\frametitle{Base}%
+%EndExpansion
+
+
+\textbf{\bigskip Dem}
+
+$\Rightarrow)$ Sea $X$ una base de $M$ y sea $m\in M$, como $X$ es base $m=%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}$, con $x_{i}\in X$, $r_{i}\in R.$ Supongamos que $m=%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}^{\prime},$ luego
+
+\bigskip$%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}=%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}^{\prime}\Rightarrow%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}-%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}^{\prime}=0\Rightarrow%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}(r_{i}-r_{i}^{\prime})=0,$
+
+\bigskip
+
+como $X$ es libre, por ser base, $r_{i}-r_{i}^{\prime}=0$ $\forall
+i=1,\ldots,m,$ es decir $r_{i}=r_{i}^{\prime}$ $\forall i=1,\ldots,n.$%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Base}}%
+%BeginExpansion
+\frametitle{Base}%
+%EndExpansion
+
+
+$\Leftarrow)$ Supongamos que para todo $m\in M$ la representación $m=%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}$, con $x_{i}\in X$, $r_{i}\in R$ es única, así claramente
+X es un conjunto de generadores de $M,$ veamos que $X$ es libre.
+
+Si $%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}=0,$ entonces$%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}r_{i}=%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+x_{i}0$, así $r_{i}=0$ $\forall i=1,\ldots,n$.
+
+\begin{Ob}
+\bigskip Si $X$ es un conjunto de generadores infinito no podemos afirmar la
+unicidad de la combinación pues la suma infinita no está definida.
+\end{Ob}
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip
+
+\bigskip%
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Base}}%
+%BeginExpansion
+\frametitle{Base}%
+%EndExpansion
+
+
+\begin{Ej}
+\bigskip
+
+\begin{itemize}
+\item Todo módulo $M$ tiene al propio $M$ como conjunto generador, pues
+para cada $m\in M$ tenemos la combinación lineal finita $1=m1,$ $1\in R$.
+
+\item Si $R$ es un anillo, entonces $\{1\}$ es una base de $R_{R}$ y de
+$_{R}R$.
+\end{itemize}
+\end{Ej}
+
+\bigskip
+
+\begin{Propo}
+Si eliminamos un número finito arbitrario de elementos de un conjunto
+generador $X$ de $%
+%TCIMACRO{\U{211a} }%
+%BeginExpansion
+\mathbb{Q}
+%EndExpansion
+_{%
+%TCIMACRO{\U{2124} }%
+%BeginExpansion
+\mathbb{Z}
+%EndExpansion
+},$ entonces el nuevo conjunto con estos elemntos eliminados es un generador
+de $%
+%TCIMACRO{\U{211a} }%
+%BeginExpansion
+\mathbb{Q}
+%EndExpansion
+_{%
+%TCIMACRO{\U{2124} }%
+%BeginExpansion
+\mathbb{Z}
+%EndExpansion
+}$.
+\end{Propo}
+
+%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip
+
+\bigskip
+
+%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Base}}%
+%BeginExpansion
+\frametitle{Base}%
+%EndExpansion
+
+
+\begin{Ob}
+\bigskip La proposición anterior nos dice que $%
+%TCIMACRO{\U{211a} }%
+%BeginExpansion
+\mathbb{Q}
+%EndExpansion
+_{%
+%TCIMACRO{\U{2124} }%
+%BeginExpansion
+\mathbb{Z}
+%EndExpansion
+}$ no tiene un conjunto de generadores finito, porque si lo tuviese $%
+%TCIMACRO{\U{211a} }%
+%BeginExpansion
+\mathbb{Q}
+%EndExpansion
+_{%
+%TCIMACRO{\U{2124} }%
+%BeginExpansion
+\mathbb{Z}
+%EndExpansion
+}$ seria generado por el conjunto vacio es decir $%
+%TCIMACRO{\U{211a} }%
+%BeginExpansion
+\mathbb{Q}
+%EndExpansion
+_{%
+%TCIMACRO{\U{2124} }%
+%BeginExpansion
+\mathbb{Z}
+%EndExpansion
+}=0$.
+\end{Ob}
+
+\begin{lemma}
+[Lema de Zorn]Sea $A$ un conjunto ordenado. Si todo subconjunto totalmente
+ordenado de $A$ tiene una cota superior en $A$ entonces $A$ posee un elemnto maximal.
+\end{lemma}
+
+\begin{Propo}
+Todo espacio vectorial sobre un cuerpo $K$ tiene base.
+\end{Propo}
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\begin{Propo}
+Sea $\Lambda=\{A_{i}$ $/$ $i\in I\}$ un conjunto de submódulos de $M$,
+$A_{i}\hookrightarrow M_{R}$. Entonces
+
+$|%
+%TCIMACRO{\dbigcup \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{i\in I}}
+%EndExpansion
+A_{i})=\left\{
+\begin{array}
+[c]{l}%
+\{%
+%TCIMACRO{\dsum \limits_{i\in I^{\prime}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I^{\prime}}}
+%EndExpansion
+a_{i}\text{ }/\text{ }a_{i}\in A_{i}\text{ }\wedge\text{ }I^{\prime}\subset
+I\text{ }\wedge\text{ }I^{\prime}\text{ es finito}\}\text{ si }\Lambda
+\neq\varnothing\\
+\{0\}\text{ si }\Lambda=\varnothing
+\end{array}
+\right.  $
+\end{Propo}
+
+\textbf{Dem. }Sea $\Lambda\neq\varnothing$ y $m\in|%
+%TCIMACRO{\dbigcup \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{i\in I}}
+%EndExpansion
+A_{i})$, entonces por definición $m=%
+%TCIMACRO{\dsum \limits_{j=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{j=1}^{n}}
+%EndExpansion
+a_{j}r_{j}$, con $a_{j}\in%
+%TCIMACRO{\dbigcup \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{i\in I}}
+%EndExpansion
+A_{i}$, $r_{j}\in R$.
+
+\bigskip Luego para algún $i_{0}$, $a_{j}\in A_{i_{0}}$ y $A_{i}%
+\hookrightarrow M_{R},$ para todo $i\in I$ entonces $a_{j}r_{j}=a_{j}^{\prime
+}\in A_{i_{0}}.$ Así
+
+$|%
+%TCIMACRO{\dbigcup \limits_{i}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{i}}
+%EndExpansion
+A_{i})\hookrightarrow\{%
+%TCIMACRO{\dsum \limits_{i}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i}}
+%EndExpansion
+a_{i}$ $/$ $a_{i}\in A_{i}\wedge I^{\prime}\subset I\wedge I^{\prime}$ es
+finito$\}.$
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\bigskip Es claro que $|%
+%TCIMACRO{\dbigcup \limits_{i}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{i}}
+%EndExpansion
+A_{i})\hookleftarrow\{%
+%TCIMACRO{\dsum \limits_{i}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i}}
+%EndExpansion
+a_{i}$ $/$ $a_{i}\in A_{i}\wedge I^{\prime}\subset I\wedge I^{\prime}$ es
+finito$\}..$
+
+\begin{Defi}
+Sea $\Lambda=\{A_{i}$ $/$ $i\in I\}$ un conjunto de submódulos de $M$,
+$A_{i}\hookrightarrow M_{R},$ luego%
+
+\[%
+%TCIMACRO{\dsum \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I}}
+%EndExpansion
+A_{i}=|%
+%TCIMACRO{\dbigcup \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{i\in I}}
+%EndExpansion
+A_{i})
+\]
+
+
+es llamada \textbf{suma de submódulos }$\{A_{i}$ $/$ $i\in I\}$.
+\end{Defi}
+
+%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\begin{Ob}
+\bigskip
+
+\begin{itemize}
+\item Si $\Lambda=\{A_{1},\ldots,A_{n}\}$, notamos $%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+A_{i}$ y sus elementos son de la forma $%
+%TCIMACRO{\dsum \limits_{i=1}^{n}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i=1}^{n}}
+%EndExpansion
+a_{i}$ con $a_{i}\in A_{i}$.
+
+\item No podemos afirmar que la representacion de los elementos de la suma de
+submódulos es única.
+\end{itemize}
+\end{Ob}
+
+%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\begin{Lema}
+\bigskip Sea $A\hookrightarrow_{\neq}M,$ luego es equivalente
+
+\begin{enumerate}
+\item $A$ es submódulo máximal de $M.$
+
+\item $\forall m\in M$ $:$ $m\notin A\Rightarrow M=mR+A$.
+\end{enumerate}
+\end{Lema}
+
+\bigskip\textbf{Dem. }(1)$\Rightarrow$(2). Sea $m\notin A$, luego
+$A\hookrightarrow_{\neq}mR+A$ y como $A$ es submódulo principal $mR+A=M$.
+
+(2)$\Rightarrow$(1). Considerems $A\hookrightarrow_{\neq}B\hookrightarrow M$ y
+sea $m\in B$ tal que $m\notin A.$
+
+\bigskip
+
+Como $m\in B$ $mR\hookrightarrow B,$ luego $mR+A\hookrightarrow B+A,$ así
+
+%
+
+\[
+M=mR+A\hookrightarrow B+A\hookrightarrow B\hookrightarrow M.
+\]
+
+
+\bigskip
+
+Por lo tanto $M=B$.
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\begin{Teo}
+Si el módulo $M_{R}$ esta finitamente generado entonces cada submódulo
+propio de $M$ esta contenido en un submódulo maximal.
+\end{Teo}
+
+\qquad
+
+\textbf{Dem. }Sea $\{m_{1},\ldots,m_{t}\}$ un conjunto de generadores de $M$ y
+sea $A\hookrightarrow_{\neq}M,$ luego el conjunto%
+
+\[
+\Phi=\{B/A\hookrightarrow B\bigskip\hookrightarrow_{\neq}M\}
+\]
+
+
+es distinto de vacio pues $A\in\Phi.$
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\bigskip Buscamos aplicar el Lema de Zorn, para ello debemos ver que todo
+subconjunto totalmente ordenado tiene cota superior.
+
+Sea $\Gamma\subseteq\Phi$ un subconjunto totalmente ordenado y sea $C=%
+%TCIMACRO{\dbigcup \limits_{B\in\Gamma}}%
+%BeginExpansion
+{\displaystyle\bigcup\limits_{B\in\Gamma}}
+%EndExpansion
+B$ notamos que $C$ verifica que $A\hookrightarrow C.$
+
+Si suponemos que $C=M$ entonces $\{m_{1},\ldots,m_{t}\}\subseteq C$ y existe
+$B\in\Gamma$ tal que $\{m_{1},\ldots,m_{t}\}\subseteq B,$ luego $B=M,$ absurdo.
+
+Luego $C\in\Phi$ y por el Lema de Zorn existe un elemento maximal $D$ en
+$\Phi.$ Veamos que $D$ es un submódulo maximal de $M_{R},$ sea
+$D\hookrightarrow L\hookrightarrow_{\neq}M,$ entonces $L\in\Phi$ y como $D$ es
+elemento maximal $D=L$.%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\begin{Corol}
+Todo módulo $M\neq\varnothing$ finitamente generado tiene un submódulo maximal.
+\end{Corol}
+
+\begin{Teo}
+El módulo $M_{R}$ esta finitamente generado si y solo si en todo conjunto
+$\{A_{i}/i\in I,A_{i}\hookrightarrow M\}$ que verifica $%
+%TCIMACRO{\dsum \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I}}
+%EndExpansion
+A_{i}=M$ existe un subconjunto finito $\{A_{i}/i\in I_{\text{\thinspace}%
+0},I_{0}\subseteq I$ finito$\}$ tal que%
+
+\[%
+%TCIMACRO{\dsum \limits_{i\in I_{0}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I_{0}}}
+%EndExpansion
+A_{i}=M
+\]
+
+\end{Teo}
+
+%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\bigskip\textbf{Dem. }$\Rightarrow).$ Sea $M$ finitamente generado, entonces
+existe un conjunto finito de generadores, $\{m_{1},\ldots,m_{t}\}$, así
+$M=m_{1}R+\ldots+m_{t}R,$ si el conjunto $\{A_{i}$ $/$ $i\in I,$
+$A_{i}\hookrightarrow M\}$ verifica $%
+%TCIMACRO{\dsum \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I}}
+%EndExpansion
+A_{i}=M$ , entonces cada $m_{i}$ es una suma finita de elementos de $A_{i}.$
+Así existe $I_{0}\subset I$ finito tal que $m_{1},\ldots,m_{t}\in%
+%TCIMACRO{\dsum \limits_{i\in I_{0}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I_{0}}}
+%EndExpansion
+A_{i}.$ Sigue que $M=m_{1}R+\ldots+m_{t}R\hookrightarrow%
+%TCIMACRO{\dsum \limits_{i\in I_{0}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I_{0}}}
+%EndExpansion
+A_{i}\hookrightarrow M$. Por lo tanto $%
+%TCIMACRO{\dsum \limits_{i\in I_{0}}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{i\in I_{0}}}
+%EndExpansion
+A_{i}=M.$
+
+$\Longleftarrow).$ Consideramos el conjunto $\{mR$ $/$ $m\in M\}$ que verifica
+$%
+%TCIMACRO{\dsum \limits_{m\in M}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{m\in M}}
+%EndExpansion
+mR=M,$ por hipótesis existe un conjunto finito $\{m_{1}R,\ldots,m_{t}R\}$
+tal que $m_{1}R+\ldots+m_{t}R=M.$ Por lo tanto $M$ esta finitamente generado.
+
+\bigskip
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\begin{Defi}
+Diremos que $M_{R}$ es \textbf{finitamente congregado }si y solo si para cada
+conjunto $\{A_{i}$ $/$ $i\in I,$ $A_{i}\hookrightarrow M\}$ que verifca $%
+%TCIMACRO{\dbigcap \limits_{i\in I}}%
+%BeginExpansion
+{\displaystyle\bigcap\limits_{i\in I}}
+%EndExpansion
+A_{i}=\{0\}$ existe un subconjunto finito $\{A_{i}$ $/$ $i\in
+I_{\text{\thinspace}0},$ $I_{0}\subseteq I$ finito$\}$ tal que $%
+%TCIMACRO{\dbigcap \limits_{i\in I_{0}}}%
+%BeginExpansion
+{\displaystyle\bigcap\limits_{i\in I_{0}}}
+%EndExpansion
+A_{i}=\{0\}.$
+\end{Defi}
+
+\begin{lemma}
+[Ley Modular]Sean $A,$ $B$, $C\hookrightarrow M$ y $B\hookrightarrow C$ entonces%
+
+\[
+(A+B)\cap C=(A\cap C)+(B\cap C)=(A\cap C)+B\text{.}%
+\]
+
+\end{lemma}
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{BeginFrame}{\begin{frame}}}%
+%BeginExpansion
+\begin{frame}%
+%EndExpansion
+
+
+\bigskip%
+%TCIMACRO{\QTR{frametitle}{Suma de módulos}}%
+%BeginExpansion
+\frametitle{Suma de módulos}%
+%EndExpansion
+
+
+\bigskip\textbf{Dem}. Sean $a+b\in(A+B)\cap C,$ entonces $a+b=c\in C,$
+así $a=c-b$ y como $B\hookrightarrow C,$ $a=c-b\in A\cap C,$ entonces
+$a+b=c\in(A\cap C)+B$. Por lo tanto $(A+B)\cap C\hookrightarrow(A\cap C)+B$.
+
+Sea $d\in(A\cap C)$ y $b\in B.$ Como $B\hookrightarrow C$ tenmos que
+$d+b\in(A+B)\cap C.$ Por lo tanto, $(A\cap C)+B\hookrightarrow(A+B)\cap C$
+
+\bigskip
+
+\bigskip%
+
+%TCIMACRO{\TeXButton{Transition: Box Out}{\transboxout}}%
+%BeginExpansion
+\transboxout
+%EndExpansion%
+%TCIMACRO{\TeXButton{EndFrame}{\end{frame}}}%
+%BeginExpansion
+\end{frame}%
+%EndExpansion
+
+
+
+\end{document}
