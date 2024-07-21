@@ -423,12 +423,22 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathpazo/fplmbb.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/mathpazo/zplmr7v.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathpazo/fplmr.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/adobe/palatino/pplr8r.tfm
 OUTPUT TrabajoFinalModulos 1.nav
 OUTPUT TrabajoFinalModulos 1.toc
 OUTPUT TrabajoFinalModulos 1.snm
 INPUT TrabajoFinalModulos 1.aux
 INPUT ./TrabajoFinalModulos 1.out
 INPUT ./TrabajoFinalModulos 1.out
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
@@ -440,5 +450,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.p
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb

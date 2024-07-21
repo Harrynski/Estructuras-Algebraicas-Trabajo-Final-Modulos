@@ -119,7 +119,7 @@
 
 \begin{frame}
     \frametitle{Submódulos: Ejemplos y observaciones}
-    \begin{enumerate}
+    \begin{itemize}
         \item Todo módulo \( M \) posee los submódulos triviales \( 0 \) y \( M \), donde \( 0 \) es el submódulo 
         que contiene solo el elemento cero de \( M \).
         \item Sea \( M \) arbitrario y sea \( m_0 \in M \).
@@ -133,24 +133,24 @@
         \item Los ideales cíclicos de un anillo se llaman ideales principales y un anillo conmutativo se 
         llama anillo de ideales principales si cada ideal es un ideal principal.
         \item Un campo \( K \) tiene solo los ideales triviales \( 0 \) y \( K \).
-    \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Submódulos: Definiciones}
     \begin{enumerate}
-        \item[(1)] Un módulo \( M = M_R \) se llama \textit{cíclico} si y solo si
+        \item Un módulo \( M = M_R \) se llama \textit{cíclico} si y solo si
         \[ \exists m_0 \in M : \; M = m_0R \]
-        \item[(2)] Un anillo \( R \) se llama \textit{simple} si y solo si
+        \item Un anillo \( R \) se llama \textit{simple} si y solo si
         \[
         \forall A \hookrightarrow R: \; A = 0 \text{ or} A = R,
         \]
         es decir, \( 0 \) y \( R \) son los únicos ideales bilaterales de \( R \).
-        \item[(3)] Un submódulo \( A \hookrightarrow M \) se dice un \textit{submódulo minimal} de \( M \) si y solo si
+        \item Un submódulo \( A \hookrightarrow M \) se dice un \textit{submódulo minimal} de \( M \) si y solo si
         \[
         0 \hookrightarrow B \hookrightarrow A \;\Rightarrow\; B = 0 \text{ o } B = A,
         \]
-        \item[(4)] Un submódulo \( A \hookrightarrow M \) se dice un \textit{submódulo maximal} sí y solo si
+        \item Un submódulo \( A \hookrightarrow M \) se dice un \textit{submódulo maximal} si y solo si
      \[
             A \hookrightarrow B \hookrightarrow M \;\Rightarrow\; B = A \text{ o } B = M.
             \]
@@ -176,7 +176,7 @@
 
 \begin{frame}
     \frametitle{Ejemplos}
-    \begin{enumerate}
+    \begin{itemize}
         \item \( \mathbb{Z} \) no contiene ideales minimales (simples), ya que si \( n\mathbb{Z} \neq 0 \), 
         entonces \( 2n\mathbb{Z} \) es un ideal no nulo contenido dentro de \( n\mathbb{Z} \). 
         \item Los ideales maximales de \( \mathbb{Z} \) son exactamente los ideales primos \( p\mathbb{Z} \), donde \( p \) 
@@ -194,7 +194,7 @@
         \]
         Por lo tanto, \( A \) no puede ser minimal. 
         Más adelante veremos que no existen submódulos maximales.
-    \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -214,18 +214,84 @@
 
     Hemos definido a \( R \) con un elemento unitario y a \( K \) actuando unitariamente sobre \( R \). 
     El par \( (R, K) \) también se denomina \( K \)-álgebra o álgebra sobre \( K \).\\
-    No tiene sentid definir a \( R \) como una "álgebra derecha sobre \( K \)". Dado que \( K \) es conmutativo, podemos, a partir de la definición
+    No tiene sentido definir a \( R \) como una "álgebra derecha sobre \( K \)". Dado que \( K \) es conmutativo, podemos, a partir de la definición
     \[
     kr := rk, \quad \forall r \in R, k \in K,
     \]
-    pasar inmediatamente a una "álgebra izquierda sobre \( K \)".
+    pasar inmediatamente a un ``álgebra izquierda sobre \( K \)".
     
 \end{frame}
 
+\begin{frame}
+    \frametitle{Suma Interna Directa}
+    Decimos que \(M\) es una \textit{suma interna directa} de la familia \(\left\{ B_i, i\in I \right\}\) de submódulos \(B_i \hookrightarrow M\), 
+    y notamos 
+    \[M = \bigoplus_{i\in I} B_i \]
+    si y solo si se verifican las condiciones:
+    \begin{enumerate}
+        \item \[ M = \sum_{i\in I} B_i \]
+        \item \[ \forall j \in I: \; B_j \cap \sum_{\substack{i\in I \\ i \neq j }} B_i = 0\]
+    \end{enumerate}
+\end{frame}
 
+\begin{frame}
+    \frametitle{Suma Interna Directa: Unicidad de representación}
+    \textbf{Lema:} Sea \(B_i, i\in I\), un conjunto de submódulos \(B_i\hookrightarrow M\) tales que
+    \(M = \sum_{i\in I} b_i\). Entonces, la condición (2) de la definición anterior equivale a que la 
+    representación de cada \(x\in M\) de la forma \(x = \sum_{i\in I'} b_i\), con \(b_i \in B_i\) y
+    \(I'\subseteq I\), \(I'\) finito, es única. Esto es
+    \[ x =  \sum_{i\in I'} b_i = \sum_{i\in I'} c_i, \qquad b_i,c_i\in B_i \qquad \Rightarrow \qquad b_i = c_i, \; \forall i\in I'\]
 
+\end{frame}
 
+\begin{frame}
+    \frametitle{Demostración}
 
+    ``\(\Rightarrow\)'' Sea (2) cierto y sea \( x = \sum_{i \in I'} b_i = \sum_{i \in I'} c_i \), luego \(\sum b_i - \sum c_i = 0\),
+    así   \(b_j - c_j = \sum_{i\neq j} c_i - b_i\). Entonces, tenemos que
+    \[
+    \forall j \in I': \qquad b_j - c_j = \sum_{\substack{i \in I' \\ i \neq j}} (c_i - b_i) \in B_j \cap \left( \sum_{\substack{i \in I' \\ i \neq j}} B_i  \right).
+    \]
+    Dado que \(I'\subseteq I\) y que (2) vale, tenemos
+    \[
+    B_j \cap \left( \sum_{\substack{i \in I' \\ i \neq j}} B_i \right) \hookrightarrow B_j \cap \left( \sum_{\substack{i \in I \\ i \neq j}} B_i \right) = 0.
+    \]
+    sigue que \( b_j - c_j = 0 \), esto es, \( b_j = c_j \), para todo \( j \in I' \).
+\end{frame}
 
+\begin{frame}
+``\(\Leftarrow\)'': Sea
+\[
+b \in B_j \cap \left( \sum_{\substack{i \in I \\ i \neq j}} B_i \right),
+\]
+entonces \( b = b_j \in B_j \) y hay un subconjunto finito \( I' \subset I \) con \( j \notin I' \) tal que
+\[
+b = b_j = \sum_{i \in I'} b_i, \quad b_i \in B_i.
+\]
+Si añadimos al lado izquierdo los sumandos \( 0 \in B_i, \, i \in I' \) y al lado derecho el sumando \( 0 \in B_j \), 
+entonces el mismo conjunto de índices finito \( I' \cup \{j\} \) aparece en ambos lados
+\[ 
+    b_j + \sum_{i \in I'} 0 =  \sum_{i \in I'} b_i + 0 \; \Rightarrow \; \sum_{k \in I'\cup \{j\}} b_k =  \sum_{k \in I'\cup \{j\} } b_k
+\]
+y por unicidad se sigue que \( b = b_j = 0 \), es decir, (2) se cumple. \hfill \(\blacksquare\)
+\end{frame}
 
+\begin{frame}
+    \textbf{Definición:}
+        \begin{enumerate}
+            \item Un submódulo \(B \hookrightarrow M \) se dice un \textit{sumando directo} de \(M\) si existe \(C\hookrightarrow M\)
+            tal que \(M = B\bigoplus C\)
+            \item Un módulo \(M \neq 0\) se dice \textit{no directamente descomponible} si \(0\) y \(M\) son los únicos sumandos directos
+            de \(M\).
+        \end{enumerate}
+    \textbf{Ejemplos:}
+        \begin{itemize}
+            \item Sea \(V=V_K\) un espacio vectorial y sea \(\{x_i, i\in I\}\) una base de V. Entonces
+            \[ V = \bigoplus_{i\in I} x_i K .\]
+            Más aún, todo subespacio de \(V\) es un sumando directo.
+            \item En \(\mathbb{Z}_{\mathbb{Z}}\) el ideal \(n\mathbb{Z}\) con \(n \notin \{-1,0,1\}\) no es un sumando directo.
+            Si suponemos \(\mathbb{Z} = n\mathbb{Z} \bigoplus m\mathbb{Z}\) con \(n\neq 0\), luego \(nm \in n\mathbb{Z}\cap m\mathbb{Z}\)
+            y así \(m=0\), por lo que \(\mathbb{Z} = n\mathbb{Z}\).
+        \end{itemize}
+\end{frame}
 \end{document}

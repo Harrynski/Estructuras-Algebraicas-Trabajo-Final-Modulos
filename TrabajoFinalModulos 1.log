@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.20)  20 JUL 2024 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.20)  21 JUL 2024 15:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -762,6 +762,16 @@ File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 
 ] [10
 
+] [11
+
+] [12
+
+] [13
+
+] [14
+
+] [15
+
 ]
 \tf@nav=\write6
 \openout6 = `"TrabajoFinalModulos 1.nav"'.
@@ -781,18 +791,18 @@ Package rerunfilecheck Info: File `"TrabajoFinalModulos 1".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22021 strings out of 474116
- 429123 string characters out of 5743682
- 1943187 words of memory out of 5000000
- 43880 multiletter control sequences out of 15000+600000
- 578231 words of font info for 98 fonts, out of 8000000 for 9000
+ 22048 strings out of 474116
+ 429338 string characters out of 5743682
+ 1942187 words of memory out of 5000000
+ 43890 multiletter control sequences out of 15000+600000
+ 580317 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,123p,489b,795s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on "TrabajoFinalModulos 1.pdf" (10 pages, 139179 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
+Output written on "TrabajoFinalModulos 1.pdf" (15 pages, 172338 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
- 21 named destinations out of 1000 (max. 500000)
+ 533 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
+ 31 named destinations out of 1000 (max. 500000)
  95 words of extra memory for PDF output out of 10000 (max. 10000000)
 
